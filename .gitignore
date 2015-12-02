@@ -1,0 +1,12 @@
+.DS_Store
+
+#this is the output of my in work cv
+CV.pdf
+
+
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz

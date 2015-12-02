@@ -1,0 +1,431 @@
+% LaTeX resume using res.cls
+\documentclass[margin]{res}
+%\usepackage{charter}
+\renewcommand*\sfdefault{uop}
+%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
+%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\setlength{\textwidth}{5.2in} % set width of text portion
+\usepackage{hyperref}% add hypertext capabilities
+% \hypersetup{colorlinks=true}
+\urlstyle{same}
+\usepackage{verbatim} %lets me comment out blocks of text with \begin{comment} and \end{comment}
+\usepackage{cleveref}
+\usepackage{graphicx}
+
+
+%This lets me add headers/footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+% \thispagestyle{\rhead{\includegraphics[scale= 0.18]{BenRose_ND_Contact.png}}}
+
+\renewcommand{\headrulewidth}{0.0pt}
+%\lhead{}
+%\chead{}
+%\rhead{Benjamin Rose CV \thepage} %\thepage} this adds a page number
+%\rhead{\includegraphics[scale= 0.15]{BenRose_ND_Contact.png}}
+\lfoot{last updated: \today}
+\cfoot{}
+\rfoot{Benjamin Rose CV, page \thepage}
+%\rhead{\includegraphics[scale= 0.18]{BenRose_ND_Contact.png}}
+
+
+\thispagestyle{fancy}
+\thispagestyle{empty}
+%\rhead{\includegraphics[scale= 0.18]{BenRose_ND_Contact.png}}
+
+\makeatletter
+\newcommand\entry{\@startsection{subsubsection}{3}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {-1.5ex \@plus -.2ex}% Formerly 1.5ex \@plus .2ex
+                                     {\normalfont\normalsize\bfseries}}
+\makeatother
+
+
+
+\begin{document}
+% Center the name over the entire width of resume:
+%\moveleft.5\hoffset\centerline{\hfill \includegraphics[scale =0.17]{BenRose_ND_Contact.png}}
+\moveleft.5\hoffset\centerline{\Huge\bf \href{http://www.nd.edu/~brose3}{Benjamin Rose}}
+\moveleft.5\hoffset\centerline{\large \bf Physics graduate student at Notre Dame}
+\moveleft.5\hoffset\centerline{\bf \href{http://orcid.org/0000-0002-1873-8973}{OrcidID: 0000-0002-1873-8973}}
+% Draw a horizontal line the whole width of resume:
+\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+% address begins here
+% Again, the address lines must be centered over entire width of resume:
+\moveleft.5\hoffset\centerline{Department of Physics \hfill 574.387.3453}
+\moveleft.5\hoffset\centerline{225 Nieuwland Science Hall \hfill \url{brose3@nd.edu}}
+\moveleft.5\hoffset\centerline{Notre Dame, IN 46556 \hfill \href{http://www.nd.edu/~brose3}{www.nd.edu/\~{}brose3}}
+%\moveleft.5\hoffset\centerline{574.387.3453 -- \url{brose3@nd.edu}}
+%\moveleft.5\hoffset\centerline{\url{www.nd.edu/~brose3}}
+%\moveleft.5\hoffset\centerline{brose3@nd.edu} %try to make clickable using /url??
+%\moveleft.5\hoffset\centerline{brose12@my.whitworth.edu}
+
+
+
+
+
+
+
+\begin{resume}
+\section{Education}
+%\subsubsection{Current Program:} 
+% {\bf Current Program:} \\
+% {\sl Doctor of Philosophy  \hfill  Expected Graduation 2018} \\
+% Advisor: \href{www.nd.edu/~pgarnav}{Peter Garnavich}
+% The University of Notre Dame \\
+% South Bend, IN
+
+{\bf 3rd year Ph.D. Student\hfill  {\it started} September 2012 }\\
+\href{http://physics.nd.edu}{University of Notre Dame}, Notre Dame, IN \\ 
+Advisor: \href{www.nd.edu/~pgarnavi}{Peter Garnavich}
+
+% {\bf M.S. in Physics\hfill  May 2015 }\\
+% \href{http://physics.nd.edu}{University of Notre Dame}, Notre Dame, IN \\ 
+% Advisor: \href{www.nd.edu/~pgarnavi}{Peter Garnavich}
+
+% {\bf Completed Education:} \\
+{\bf B.S. in Physics\hfill  May 2012 }\\
+cum laude\\%, GPA: 3.6/4.0 \\
+\href{http://www.whitworth.edu/physics/}{Whitworth University}, Spokane, WA \\ 
+Minor: Mathematics
+ 
+
+\section{\href{http://www.nd.edu/~brose3/current-research.html}{Research \\Interests}}
+% \begin{tabular}{l l}
+% Type Ia Supernovae & Observational Cosmology  \\
+% Type Ia Supernovae Host Environment & Nuclear Astrophysics \\
+% Public and Community Based Science
+% \end{tabular}
+
+\begin{itemize}\itemsep -2pt
+\item Type Ia supernovae%, specifically host environments
+\item Observational cosmology 
+\item Public and open based science
+\end{itemize} 
+
+
+
+\section{Employment}
+\href{http://physics.nd.edu}{\bf University of Notre Dame} {\bf \hfill August 2012 - Present}\\
+{\sl Research Assistant} \hfill 2 semester \\
+{\sl \href{labTA}{Teaching Assistant} \cref*{SI} } \hfill 3 semesters
+%todo(make ref to different section in this text)
+
+
+\href{http://www.whitworth.edu/physics/}{\bf Whitworth University} {\bf \hfill February 2011 - May 2012}\\
+{\sl Supplemental Instruction Leader \cref{SI} for Physics } \hfill 2 semesters \\
+{\sl Laboratory Teaching Assistant } \hfill 1 semester
+% \begin{itemize}\itemsep -2pt
+% \item More details under Teaching Experience
+% \end{itemize} 
+ 
+{\bf Personal Tutor \hfill September 2011 - May 2012}\\
+{\sl High School Geometry and Algebra } 
+
+\href{http://www.tunl.duke.edu}{\bf Triangle Universities Nuclear Laboratory} {\bf \hfill Summer 2011}\\
+{\sl Research Experience for Undergraduates }
+\begin{itemize}\itemsep -2pt
+\item Durham, NC
+% \item Worked on \textit{Determining the Location of a Radioactive Source in \textsc{Majorana Demonstrator}} described in Lab Work \& Projects 
+\end{itemize} 
+
+
+
+
+
+
+%this should just be on the web, it seems odd in a CV.
+\section{Research \\Experience}
+{\bf Searching for a Cosmic Bulk Flow} 
+\begin{itemize}\itemsep -2pt
+     \item Minimized around a cosine distribution to look for a directional dependence to the residuals of the Hubble Diagram
+     \item Developed in Python with \href{http://www.astropy.org}{astropy}, \href{http://roban.github.io/CosmoloPy/}{CosmoloPy}, and \href{https://code.google.com/p/pyminuit/}{PyMinuit}
+\end{itemize}
+
+{\bf Determining the Location of a Radioactive Source in \textsc{Majorana Demonstrator}}
+\begin{itemize}\itemsep -2pt
+   \item Worked at \href{http://www.tunl.duke.edu}{TUNL} analyzing simulated data with \href{http://root.cern.ch/drupal/content/pyroot}{pyROOT} to determine how well the \textsc{Majorana} detector array can resolve the location of a radioactive hot spot.
+\end{itemize}
+
+
+
+
+
+
+\section{Observational Experience}
+{\href{http://vaticanobservatory.org/VATT/}{\bf  Vatican Advanced Technology Telescope (VATT)}} \\
+\href{http://mgio.arizona.edu}{Mount Graham International Observatory}
+\begin{itemize}\itemsep -2pt
+   \item June 27, 2014 - July 1, 2014
+\end{itemize}
+
+
+
+
+
+\section{Teaching Experience}\label{Teaching}
+{\bf Laboratory Teaching Assistant:} \label{labTA}
+Ran introductory physics lab and graded lab notebooks and reports.
+
+{\bf \hfre{?}{Supplemental Instruction} Leader:} \label{SI}
+Led a group study session of introductory physics material with a focus on active learning techniques.
+
+{\bf Personal Tutor:}
+Worked individually with a student on material and study skills for High School Geometry and Algebra.
+
+
+
+
+
+
+
+
+\section{Activities \& Outreach}
+{\bf AAS}, Junior Member  \hfill {\bf 2014 - present }\\
+{\bf Graduate Student Union}, Physics Department Representative  \hfill {\bf 2013 - 2014 }\\
+{\bf American Physical Society}, Member  \hfill {\bf 2011 - 2014 }\\
+{\bf Notre Dame Summer Band} \hfill {\bf 2013 \&  2014 }\\
+{\bf Whitworth University Wind Symphony}  \hfill {\bf 2009 - 2012 }\\
+{\bf Physics Outreach \hfill  Spring 2012}
+\begin{itemize}\itemsep -2pt
+\item Worked with middle school students on high altitude weather balloon experiments.
+\item Developed \& built radiation, ozone detector systems, and temperature sensors.
+\end{itemize}
+{\bf Club Treasurer}, Whitworth University \hfill {\bf2009 - 2011}
+
+% {\bf Massah} \hfill Summer 2010
+% \begin{itemize}  \itemsep -2pt %reduce space between items
+%      \item A 10 week program of developing and studying group dynamics and cross-cultural activities in Israel and India
+% \end{itemize}
+% {\bf Small Group Leader}, Whitworth University \hfill 2009 - 2010
+% \begin{itemize}  \itemsep -2pt %reduce space between items
+%      \item Co-leading of a student Bible study
+% \end{itemize}
+
+
+
+
+
+
+
+\section{Awards}
+{\bf Poster Grant}, GSU 6th Annual Research Symposium \hfill {\bf 2014}  \\
+{\bf Presidential Scholarship}, Whitworth University \hfill {\bf2008 - 2012} \\
+{\bf Delbert E. Friesen Memorial Scholarship}, Whitworth University \hfill {\bf2011 - 2012} \\
+{\bf Talent Scholarship in Physics}, Whitworth University \hfill {\bf2008 - 2011} \\
+{\bf Talent Scholarship in Music}, Whitworth University \hfill {\bf2009 - 2012} \\
+{\bf Laureate Society}, Whitworth University \hfill {\bf4 semesters}
+\begin{itemize}  \itemsep -2pt %reduce space between items
+     \item Having a semester GPA of 3.75 or greater
+\end{itemize}
+
+
+
+
+
+
+
+
+\section{\href{https://github.com/brose3}{Computer \\Skills}}
+%{\bf Computer Languages \& Programs:}
+{\bf Daily Use:} Python, git, astropy, \LaTeX, Markdown, OS X \\
+{\bf Proficient:} Mathematica, MATLAB, Windows \\
+{\bf Basic Knowledge:} C++, ROOT, Linux \\
+{\bf Some Experience:} LabVIEW, Apple Script, Julia, Parallel Computing, Swift \\
+
+
+
+
+
+
+\section{Talks \& Presentations}
+
+ $_{•}    $\\\centerline{\bf Talks:} \\ \\
+{\bf Finding A Cosmic Bulk Flow \hfill April 28, 2014} \\
+{\sl 2014 GPS Spring Conference} \\
+The University of Notre Dame \\
+South Bend, IN
+
+% {\sl Galaxies talk 3}  \\
+% The University of Notre Dame \\
+% South Bend, IN
+% \begin{itemize}\itemsep -2pt
+%      \item A class presentation given as an author on a significant paper from the literature
+% \end{itemize}
+
+% {\sl Galaxies talk 2}  \\
+% The University of Notre Dame \\
+% South Bend, IN
+% \begin{itemize}\itemsep -2pt
+%      \item A class presentation given as an author on a significant paper from the literature
+% \end{itemize}
+
+% {\bf Buldeless Dwarf Galaxies, Presenting on Govenato et al. 2010 \\
+%  $_{•}    $ \hfill February 14, 2014}  \\
+% The University of Notre Dame \\
+% South Bend, IN
+% \begin{itemize}\itemsep -2pt
+%      \item A class presentation given as an author on a significant paper from the literature
+% \end{itemize}
+
+{\bf Determining the Location of a Radioactive Source in \textsc{Majorana Demonstrator} \\
+$_{•}    $  \hfill August 2, 2011} \\
+{\sl Research Experience for Undergraduates Culminating Talks}  \\
+Duke University \\
+Durham, NC
+\begin{itemize}\itemsep -2pt
+     \item APS style presentation of summer research
+\end{itemize}
+
+
+
+
+ $_{•}    $\\
+\centerline{\bf Posters:} \\ \\
+{\bf Finding A Cosmic Bulk Flow  \hfill February 27, 2014} \\
+{\sl Graduate Student Union 6th Annual Research Symposium} \\
+The University of Notre Dame \\
+South Bend, IN
+
+% \subsubsection{Poster Sessions:}
+% {\sl Finding A Cosmic Bulk Flow} \\
+% event Name \hfill February ??, 2014\\
+% University of Notre Dame \\
+% South Bend, IN
+
+\href{<http://meeting.aps.org/Meeting/DNP11/Session/EA.115>}{\bf Determining the Location of a Radioactive Source in \textsc{Majorana Demonstrator}} \\
+{\bf $_{•}    $  \hfill October 27, 2011 }\\
+American Physical Society, Department of Nuclear Physics\\ 
+Michigan State University \\
+East Lansing, MI 
+
+
+
+
+
+\section{Publications}
+something cool and automatic!
+\subsection{First Author}
+\subsubsection{Collaborator}
+G. Mathews, et. al. (2014) {\it Cosmic Bulk Flow.} in prep.
+\subsection{Non-peer reviewed}
+
+
+
+% change this to outreach(/leadership maybe) & research interests.
+
+% \section{Lab Work\\ \& \\Projects}
+% {\sl Searching for a Cosmic Bulk Flow} \hfill ?? 
+% \begin{itemize}\itemsep -2pt
+%      \item Searching for a Dark Flow signal using supernovae (SNe)
+%      \item Working with multiple SNe catalogs
+%      \item Developing my own analysis code
+% \end{itemize}
+
+% {\sl Physics Outreach} \hfill Spring 2012 
+% \begin{itemize}\itemsep -2pt
+% 	\item Worked with middle school students on high altitude weather balloon experiments
+% 	\item Personally worked on radiation and ozone detector systems, as well as temperature sensors
+% \end{itemize}
+
+% {\sl Determining the Location of a Radioactive Source in \textsc{Majorana Demonstrator}}
+%   \\ $_{•}    $                   \hfill Summer 2011
+% \begin{itemize}\itemsep -2pt
+% 	\item Presented at poster session of APS DNP 2011 
+% 	\item Worked at TUNL analyzing Monte Carlo generated data to determine how well  \textsc{Majorana} can resolve the location of a radioactive hot spot
+% \end{itemize}
+
+% {\sl Cosmic Rays} \hfill Fall 2010 
+% \begin{itemize}\itemsep -2pt
+% 	\item Detected Cosmic Rays with respect to altitude using a three Geiger counter telescope
+% 	\item Used a high altitude weather balloon
+% \end{itemize}
+
+% {\sl Electronic Robot} \hfill Spring 2010 
+% \begin{itemize}\itemsep -2pt
+% 	\item Electronics class final project
+% 	\item Designed and built a robot that wrote and erased on a whiteboard
+% \end{itemize}
+
+% {\sl Differential Equations} \hfill Fall 2009
+% \begin{itemize}\itemsep -2pt
+% 	\item Differential Equations class final project
+% 	\item Mapping the movement of a building during an earthquake by using numerical methods in MATLAB 
+% \end{itemize}
+
+
+\end{resume}
+\end{document}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+\entry{Research Assistant \hfill January 2014 - Present\\}
+{\bf Research Assistant \hfill January 2014 - Present}
+The University of Notre Dame 
+     
+{\sl Teacher Assistant} \hfill August 2012 - December 2013 \\
+The University of Notre Dame 
+\begin{itemize}\itemsep -2pt
+\item More detail under Teaching Experience.
+\end{itemize}
+
+{\sl Supplemental Instruction (SI) Leader for Physics} \hfill September 2011 - May 2012 \\
+ Whitworth University
+\begin{itemize}  \itemsep -2pt %reduce space between items
+     \item Led a    group study session of introductory physics material
+     \item Implemented active learning techniques
+\end{itemize}
+
+{\sl Research Experience for Undergraduates} \hfill Summer 2011 \\
+Triangle Universities Nuclear Laboratory (TUNL) \\ 
+Durham, NC
+\begin{itemize}  \itemsep -2pt %reduce space between items
+     \item Worked on \textit{Determining the Location of a Radioactive Source in \textsc{Majorana Demonstrator}} described in ``Lab Work \& Projects" 
+\end{itemize}
+
+{\sl Laboratory Teaching Assistant} \hfill February 2011 - May 2011 \\
+ Whitworth University
+\begin{itemize}  \itemsep -2pt %reduce space between items 
+     \item Assisted in and graded an introductory physics lab session
+\end{itemize}
+
+{\sl Personal Tutor} \hfill September 2010 - May 2011 \\
+ High School Student, Algebra II and Geometry
+\begin{itemize}  \itemsep -2pt %reduce space between items
+     \item One-on-one sessions, reinforcing content and working on homework
+\end{itemize}
+
+{\sl Daycare Teacher} \hfill January 2009 - May 2011 \\
+ Whitworth Community Presbyterian Church
+\begin{itemize}  \itemsep -2pt %reduce space between items
+     \item Responsible for up to 10 preschoolers, worked as a part of a team, planned kids activities, part of closing team, created a safe environment, encouraged creativity, and reinforced developmental skills
+\end{itemize}
+
+{\em University of Notre Dame:}
+\begin{itemize} \itemsep -2pt %reduce space between items
+     \item Laboratory Teaching Assistant and Grader
+     \begin{itemize} \itemsep -2pt %reduce space between items
+          \item Physics 1 for Life Science \hfill Fall 2013, Summer 2013
+          \item Phycics 2 for Engineers \hfill Spring 2013
+          \item Physics 2 for Life Science \hfill Fall 2012
+     \end{itemize}
+     \item Exam Grader \hfill Fall 2012 - Fall 2013
+\end{itemize}
+{\em Whitworth University:}
+\begin{itemize} \itemsep -2pt %reduce space between items
+     \item SI Instructor
+     \item Laboratory Teaching Assistant and Grader
+\end{itemize}
+
+personal tutor:One-on-one sessions, reinforcing content and working on homework
+\end{comment}
