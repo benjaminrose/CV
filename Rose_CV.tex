@@ -9,7 +9,7 @@
 %\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
 %\usepackage{newcent}   % uses new century schoolbook postscript font 
 % \setlength{\textwidth}{5.2in}%{5.2in} % set width of text portion
-\usepackage{hyperref}% add hypertext capabilities
+\usepackage[unicode]{hyperref}% add hypertext capabilities
 % \hypersetup{colorlinks=true}
 \urlstyle{same}
 \usepackage{verbatim} %lets me comment out blocks of text with \begin{comment} and \end{comment}
@@ -19,6 +19,8 @@
 \usepackage[ampersand]{easylist}
 % \usepackage{blindtext}
 \usepackage{enumitem}
+\usepackage{color}   %to grey out the numbers for my publication list
+\definecolor{light-gray}{gray}{0.55}
 
 
 %This lets me add headers/footers
@@ -62,6 +64,7 @@
 %\moveleft.5\hoffset\centerline{\hfill \includegraphics[scale =0.17]{BenRose_ND_Contact.png}}
 \moveleft.5\hoffset\centerline{\Huge\bf \href{http://www.nd.edu/~brose3}{Benjamin M. Rose}}
 % \moveleft.5\hoffset\centerline{\large \bf Physics Ph.D. Candidate at Notre Dame}
+\vspace{2pt}
 \moveleft.5\hoffset\centerline{\bf \href{http://orcid.org/0000-0002-1873-8973}{OrcidID: 0000-0002-1873-8973}}
 % Draw a horizontal line the whole width of resume:
 \setlength{}{}
@@ -92,10 +95,11 @@
 % The University of Notre Dame \\
 % South Bend, IN
 
+{\bf Doctor of Philosophy in Physics} \hfill expected {\bf 2018}\\
 {\bf Master of Science in Physics} \hfill  {\bf 2016}\\
 % {\it title} \\
 \href{http://physics.nd.edu}{University of Notre Dame}, Notre Dame, Indiana \\ 
-Advisor: \href{www.nd.edu/~pgarnavi}{Professor Peter Garnavich}
+Advisor: \href{http://www.nd.edu/~pgarnavi}{Professor Peter Garnavich}
 
 
 % {\bf M.S. in Physics\hfill  May 2015 }\\
@@ -106,7 +110,7 @@ Advisor: \href{www.nd.edu/~pgarnavi}{Professor Peter Garnavich}
 {\bf Bachelor of Science in Physics,} \textit{cum laude} \hfill \textbf{2012}\\
 % cum laude\\%, GPA: 3.6/4.0 \\
 \href{http://www.whitworth.edu/physics/}{Whitworth University}, Spokane, Washington \\ 
-Minor: Mathematics \vspace{-2pt}
+Minor: Mathematics
  
 
 % \section{\href{http://www.nd.edu/~brose3/current-research.html}{Research \\Interests}}
@@ -170,8 +174,12 @@ Minor: Mathematics \vspace{-2pt}
 
 
 
-
 \section{Observational Experience}
+
+{\href{http://www.sdss.org/dr13/manga/}{\bf Ancillary Program PI, SDSS-IV MaNGA}} \hfill \textbf{2017} \\
+\href{https://trac.sdss.org/wiki/MANGA/Survey/AncillaryPrograms2017/Rose_SNIa_Environments_and_HR}{\textit{Exploring a Possible Correlation Between Hubble Residuals and SN Ia \\Local Environments}}\\
+\href{http://www.sdss.org/dr14/manga/manga-target-selection/ancillary-targets/}{Awarded 40 ancillary targets}
+
 {\href{http://vaticanobservatory.org/VATT/}{\bf  Vatican Advanced Technology Telescope (VATT)}} \hfill \textbf{June 2014} \\
 \href{http://mgio.arizona.edu}{Mount Graham International Observatory}, Safford, Arizona \\
 % June 2014, 
@@ -180,8 +188,6 @@ Minor: Mathematics \vspace{-2pt}
 %   \item[] June 27, 2014 - July 1, 2014
 % \end{itemize}
 
-{\href{http://www.sdss.org/surveys/manga/}{\bf SDSS MaNGA}} \hfill \textbf{2017} \\
-\href{http://www.sdss.org/dr14/manga/manga-target-selection/ancillary-targets/}{40 ancillary targets}
 
 
 
@@ -192,30 +198,16 @@ Minor: Mathematics \vspace{-2pt}
 
 
 \section{Professional Societies}
-% \begin{tabbing}
-% http://www.emerson.emory.edu/services/latex/latex2e/latex2e_61.html
-% \hspace{\middlewidth}\= \kill %set up one tab stop, The edge of the 
-% \hspace{-1.5em}\begin{tabular}{p{4.17in} r}
 {\bf American Astronomical Society (AAS)}, Junior Member  \hfill {\bf 2014 - present}\\
 % \begin{itemize}\itemsep -2pt
-    % \item[] \textit{\small{Junior Member (2014-?)}}
-    % \end{itemize} \vspace{-10pt}
+    % \itme[] Full Member \hfill {\bf ???? - present}
+    % \item[] Junior Member \hfill {\bf 2014 - ????}
+% \end{itemize} \vspace{-10pt}
 % \textbf{\href{http://network.asa3.org}{American Scientific Affiliation (ASA)}}, Student Member \hfill \textbf{2014 - present}\\
-\textbf{\href{gradphysics.nd.edu}{Graduate Physics Society (GPS)}}%, Member \hfill {\bf 2012 - present} \\
-% $_{•}    $~~~~Executive Board Member \hfill {\bf 2015 - 2017}\\
-\begin{itemize}\itemsep -2pt
-    \item[] Member \hfill {\bf 2012 - present}
-    \item[] Puplic Relations Chair \hfill {\bf 2017 - present}
-    \item[] Executive Board Member \hfill {\bf 2015 - 2017}
-    \item[] Annual Conference co-chair \hfill {\bf 2016}
-\end{itemize} \vspace{-12pt}
-{\bf American Physical Society (APS)}
-\begin{itemize}\itemsep -2pt
-    \item[] Student Member  \hfill {\bf 2011 - 2014}
-\end{itemize} \vspace{-2pt}
-% Student Member
-% \end{tabular}
-% \end{tabbing}
+{\bf American Physical Society (APS)}, Student Member  \hfill {\bf 2011 - 2014}
+% \begin{itemize}\itemsep -2pt
+    % \item[] Student Member  \hfill {\bf 2011 - 2014}
+% \end{itemize} \vspace{-2pt}
 
 
 
@@ -225,28 +217,35 @@ Minor: Mathematics \vspace{-2pt}
 % \hspace{-1.5em}\begin{tabular*}{\resumewidth}{p{4.17in} r}
 % \begin{description}[align=left] % use \itme[-]
 % \ListProperties(Style2*=,Numbers=a,Numbers1=R,FinalMark={)})
-{\bf \href{gradphysics.nd.edu}{Graduate Physics Society (GPS) PR Chair}} \hfill {\bf 2017 - present}\\
-{\bf \href{gradphysics.nd.edu}{Graduate Physics Society (GPS) Executive Board Member}} \hfill {\bf 2015 - 2017}
-\\
+\textbf{\href{gradphysics.nd.edu}{Graduate Physics Society (GPS)}}%, Member \hfill {\bf 2012 - present} \\
+% $_{•}    $~~~~Executive Board Member \hfill {\bf 2015 - 2017}\\
+\begin{itemize}\itemsep -2pt
+    \item[] \href{http://gradphysics.nd.edu/about-us/committee-chairs/}{Public Relations Chair} \hfill {\bf 2017 - present}
+    \item[] Member \hfill {\bf 2012 - present}
+    \item[] \href{http://gradphysics.nd.edu/about-us/executive-board/}{Executive Board Member} \hfill {\bf 2015 - 2017}
+    \item[] \href{http://gradphysics.nd.edu/conference/gpsac-2016/}{Annual Conference co-chair}, for a conference of over 60 attendees \hfill {\bf 2016}
+    % \item[] \hspace{1.5em} We organized a conference with over 60 attendees
+\end{itemize} \vspace{-12pt}
+% {\bf \href{gradphysics.nd.edu}{Graduate Physics Society (GPS) PR Chair}} \hfill {\bf 2017 - present}\\
+% {\bf \href{gradphysics.nd.edu}{Graduate Physics Society (GPS) Executive Board Member}} \hfill {\bf 2015 - 2017}
+% \\
     % \begin{itemize}\itemsep -2pt
     % \item[] \textit{\small{Executive Board Member promoting the Socieity's goal of ``fostering a \\community built on intellectual, professional, and social interactions.''}}
     % \end{itemize} \vspace{-12pt}
-{\bf \href{http://gradphysics.nd.edu/conference/gpsac-2016/}{Graduate Physics Society Annual Conference Co-chair}} \hfill {\bf 2016 }
-% \\Member of the Oranizing Committee\\
-    \begin{itemize}\itemsep -2pt
-    \item[] \textit{\small{We organized a conference with over 60 attendees.}} % A total of 16 talks and posters
-    \end{itemize} \vspace{-12pt}
+% {\bf \href{http://gradphysics.nd.edu/conference/gpsac-2016/}{Graduate Physics Society Annual Conference Co-chair}} \hfill {\bf 2016 }
+% % \\Member of the Oranizing Committee\\
+%     \begin{itemize}\itemsep -2pt
+%     \item[] \textit{\small{We organized a conference with over 60 attendees.}} % A total of 16 talks and posters
+%     \end{itemize} \vspace{-12pt}
 %\href{http://gradphysics.nd.edu/2016/11/30/gpsac-2016-agenda/}{The conference had over 10 posters \\and 6 talks.}
     % \begin{itemize}\itemsep -2pt
     % \item[] Organizing Committee Member 
     % \end{itemize} \vspace{-10pt}   
-% {\bf American Astronomical Society (AAS)}, Junior Member  \hfill {\bf 2014 - present }\\
 {\bf Graduate Student Union (GSU)} \hfill {\bf 2013 - 2014}
 %\\ \textit{\small{I was the Physics Department representative and worked on issues of parking, \\health insurance, building remodels, and more.}}\\
     \begin{itemize}\itemsep -2pt
-    \item[] \textit{\small{I was the Physics Department representative and worked on issues regarding \\parking, health insurance, building remodels and more.}}
+    \item[] I was the Physics Department representative and worked on issues \\regarding parking, health insurance, building remodels, and more
     \end{itemize} \vspace{-12pt}
-% {\bf American Physical Society (APS)}, Student Member  \hfill {\bf 2011 - 2014 }\\
 % {\bf Notre Dame Summer Band} \hfill {\bf 2013 \&  2014 }\\
 % {\bf Whitworth University Wind Symphony}  \hfill {\bf 2009 - 2012 }\\
 {\bf\href{http://www.whitworthnearspace.org/wiki/Main_Page}{Whitworth Near Space}} \hfill  \textbf{Spring 2012} 
@@ -254,10 +253,10 @@ Minor: Mathematics \vspace{-2pt}
 % We developed and built radiation, ozone, and temperature \\detector systems. \\
     \begin{itemize}\itemsep -2pt
     % \item[] Worked with middle school students on high altitude balloon experiments
-    \item[] \textit{\small{I worked with middle school students on two high altitude balloon experiments. \\We developed and built radiation, ozone, and temperature detector systems.}}
+    % \item[] I worked with middle school students on two high altitude balloon \\experiments. We developed and built radiation, ozone, and \\temperature detector systems.
+    \item[] Assisted middle school students on two high altitude balloon \\experiments by assisting in building radiation, ozone and temperature \\sensors
     % \item[] Developed \& built radiation, ozone, and temperature detector systems
-    \end{itemize}\vspace{-12}
-    
+    \end{itemize}\vspace{-12pt}
 {\bf Club Treasurer}, Whitworth University \hfill {\bf2009 - 2011}
 % {\bf Massah} \hfill Summer 2010
 % \begin{itemize}  \itemsep -2pt %reduce space between items
@@ -275,12 +274,11 @@ Minor: Mathematics \vspace{-2pt}
 
 
 
-
 \section{Awards}
 
 {\bf Lennox Graduate Fellowship}, Notre Dame \hfill {\bf 2017}
 \begin{itemize}  \itemsep -2pt %reduce space between items
-     \item[] \textit{\small{To recognize achievements and promise as a graduate student in physics}}
+     \item[] Recognizes achievements and promise as a graduate student in physics.
 \end{itemize} \vspace{-12pt}
 {\bf GSU Conference Presentation Grant}, Notre Dame  \hfill {\bf 2015 \& 2016}\\
 {\bf Notebaert Professional Development Award}, Notre Dame \hfill {\bf 2015 \& 2016}\\
@@ -306,10 +304,10 @@ Minor: Mathematics \vspace{-2pt}
 \section{\href{https://github.com/benjaminrose}{Computer \\Skills}}
 %{\bf Computer Languages \& Programs:}
  \hspace{-1em}
- \begin{tabular}{l p{4.2in}}
-{\bf Daily Use:} & \href{https://www.python.org}{Python}, \href{https://git-scm.com}{git}, \href{https://github.com/benjaminrose}{GitHub}, \href{http://www.astropy.org}{Astropy}, \LaTeX, \href{http://daringfireball.net/projects/markdown/}{Markdown}, macOS, numpy, scipy\\
-{\bf Proficient:} &  \href{http://jupyter.org}{Jupyter Notebook}, \href{https://jekyllrb.com}{Jekyll}, HTML, CSS, Wordpress, TravisCI, pytest, codcov, \href{http://dan.iel.fm/emcee/current/}{emcee}\\
-{\bf Competent:} & \href{http://pandas.pydata.org}{pandas}, Linux, Windows %\\
+ \begin{tabular}{l p{4.5in}}
+{\bf Daily Use:} & \href{https://www.python.org}{Python}, \href{https://git-scm.com}{\texttt{git}}, \href{https://github.com/benjaminrose}{GitHub}, \href{http://www.astropy.org}{Astropy}, \LaTeX, \href{http://daringfireball.net/projects/markdown/}{Markdown}, macOS, \texttt{numpy}, \texttt{scipy}\\
+{\bf Proficient:} &  \href{http://jupyter.org}{Jupyter Notebook}, \href{https://jekyllrb.com}{Jekyll}, HTML, CSS, Wordpress, TravisCI, \texttt{pytest}, \texttt{codcov}, \href{http://dan.iel.fm/emcee/current/}{\texttt{emcee}}\\
+{\bf Competent:} & \href{http://pandas.pydata.org}{\texttt{pandas}}, Linux, Windows %\\
 %{\bf Some Experience:} & C++, Parallel Computing, Mathematica, MATLAB, Javascript, Apple Script, ROOT, Swift\\
 \end{tabular}
 % {\bf Some Experience:} LabVIEW, Apple Script, Julia, Parallel Computing, Swift
@@ -317,13 +315,13 @@ Minor: Mathematics \vspace{-2pt}
 \section{\href{https://github.com/benjaminrose}{Open Source Contributions}}
 \hspace{-1em}
 \begin{tabular}{l p{4.9in}}
-\href{http://sep.readthedocs.io/en/v1.0.x/}{\texttt{sep}} & \href{https://github.com/kbarbary/sep/commit/612033788bcce44f110a87e1b54bb70eea9960c2}{accepted documentation update} \\
+\href{https://www.scipy.org}{\texttt{scipy}} & \href{https://github.com/scipy/scipy/pull/8011}{documentation update of limitation in \texttt{integrate.quad}} accepted\\
 
-\href{https://www.scipy.org}{\texttt{scipy}} & submitted a documentation update of \href{https://github.com/scipy/scipy/issues/7204}{limitation in \texttt{integrate.quad}} \\
+\href{http://sep.readthedocs.io/en/v1.0.x/}{\texttt{sep}} & \href{https://github.com/kbarbary/sep/commit/612033788bcce44f110a87e1b54bb70eea9960c2}{documentation update accepted} \\
 
-\href{http://dan.iel.fm/emcee/current/}{\texttt{emcee}} & \href{https://github.com/dfm/emcee/pull/212}{submitted multiple documentation update} \\
+\href{http://dan.iel.fm/emcee/current/}{\texttt{emcee}} & \href{https://github.com/dfm/emcee/pull/212}{submitted a documentation update} \\
 
-\href{http://www.astropy.org}{\texttt{astropy}} & \href{https://github.com/astropy/astropy/issues/4976}{found issue in world coordinate system utility} 
+\href{http://www.astropy.org}{\texttt{astropy}} & \href{https://github.com/astropy/astropy/issues/4976}{reported an issue in world coordinate system utility} 
 % \\
 
 % \href{https://github.com/astrofrog/acknowledgment-generator}{Acknowledgment Generator} & \href{https://github.com/astrofrog/acknowledgment-generator/pull/63}{Added SDSS IV}
@@ -333,24 +331,24 @@ Minor: Mathematics \vspace{-2pt}
 
 
 
-\section{Teaching Experience}\label{teaching}
-\textbf{Intro. to Scientific Computing with Python} \hfill{} \textbf{Summer 2017}
+\section{\href{https://www3.nd.edu/~brose3/\#classes}{Teaching Experience}}\label{teaching}
+\textbf{\href{https://www3.nd.edu/~brose3/2017reu-cmp}{Introduction to Scientific Computing with Python}} \hfill{} \textbf{Summer 2017}
 \begin{itemize}\itemsep -2pt
-    \item[] \textit{\small{Lead instructor for introduction to python and computational methods \\course for the Notre Dame REU program}}
+    \item[] Lead instructor covering an introduction to python and computational \\methods for the Notre Dame REU program
     \end{itemize} \vspace{-12pt}
-\textbf{Physics GRE Preparation Course} \hfill{} \textbf{Summer 2017}
+\textbf{\href{https://www3.nd.edu/~brose3/2017reu-gre}{Physics GRE Preparation Course}} \hfill{} \textbf{Summer 2017}
 \begin{itemize}\itemsep -2pt
-    \item[] \textit{\small{Solo instructor for a review course of the material of the Physics GRE \\exam for the Notre Dame REU program}}
+    \item[] Solo instructor for a review course of the material on the Physics GRE \\exam for the Notre Dame REU program
     \end{itemize} \vspace{-12pt}
 % \textbf{Individual Tutoring} \hfill{} \textbf{Fall 2015 \& 2016}
 % % \\Sessions included topics in math methods, thermodynamics, and E\&M.\\
 %     \begin{itemize}\itemsep -2pt
 %     \item[] \textit{\small{Sessions included topics in math methods, thermodynamics, and E\&M.}}
 %     \end{itemize} \vspace{-12pt}
-\textbf{Intro. to Scientific Computing with Python} \hfill{} \textbf{Spring 2016}
+\textbf{Introduction to Scientific Computing with Python} \hfill{} \textbf{Spring 2016}
 % \\I taught weekly basic programing help session and graded programing\\ assignments.\\
     \begin{itemize}\itemsep -2pt
-    \item[] \textit{\small{Taught basic programming help session and graded assignments}}
+    \item[] Taught basic programming help session and graded assignments
     \end{itemize} \vspace{-12pt}
 % \textbf{various exam grading}
 % \textbf{Homework grading} \hfill{} \textbf{A lot}
@@ -358,15 +356,15 @@ Minor: Mathematics \vspace{-2pt}
 %     \item[] Intro. to Astronomy, Calculus based
 %     \item[] Intro. to Astronomy, no math (maybe Intro. to Cosmology)
 %     \end{itemize} \vspace{-10pt}
-\textbf{Engineering Intro. Physics labs} \hfill{} \textbf{Spring \& Fall 2013}\\
-\textbf{Pre-Med. Intro. Physics labs} \hfill{} \textbf{Fall 2012 \& Summer 2013}\\
+\textbf{Engineering Introduction Physics Labs} \hfill{} \textbf{Spring \& Fall 2013}\\
+\textbf{Pre-Medical Introduction Physics Labs} \hfill{} \textbf{Fall 2012 \& Summer 2013}\\
 % $_{•}    $ \hfill \textbf{Summer 2013}
     % \begin{itemize}\itemsep -2pt
     % \item[] Three semesters, multiple sections
     % \end{itemize} \vspace{-10pt}
 {\bf Supplemental Instruction Leader} \hfill{} \textbf{Fall 2011 \& Spring 2012}
     \begin{itemize}\itemsep -2pt
-    \item[] \textit{\small{Led a group study session of introductory physics material with a focus\\on active learning techniques.}}
+    \item[] Led a group study session of introductory physics material with a \\focus on active learning techniques
     \end{itemize}
 
 % {\bf Personal Tutor:}
@@ -389,6 +387,17 @@ year |   Fall        | Spring        | Summer
 
 
 \section{Oral \\Presentations}
+
+\hangindent=15pt {\footnotesize \textcolor{light-gray}{3}} {\sl Searching For a Cosmic-scale Dark Flow}, November 20, 2015,
+2015 APS Prairie Section Meeting, Notre Dame, Indiana
+\vspace{-12pt}
+
+\hangindent=15pt {\footnotesize \textcolor{light-gray}{2}} {\sl Finding A Cosmic Bulk Flow}, April 28, 2014, 2014 GPS Spring Conference, Notre Dame, Indiana
+\vspace{-12pt}
+
+\hangindent=15pt {\footnotesize \textcolor{light-gray}{1}} {\sl Determining the Location of a Radioactive Source in \textsc{Majorana Demonstrator}}, August 2, 2011, REU Culminating Talks, Duke University, 
+
+\begin{comment}
 {\sl Searching For a Cosmic-scale Dark Flow} \hfill {\bf November 20, 2015}\\
 2015 APS Prairie Section Meeting, Notre Dame
 
@@ -399,6 +408,9 @@ year |   Fall        | Spring        | Summer
 {\sl\textsc{Demonstrator}} \\
 REU Culminating Talks,
 Duke University %\hfill {\bf August 2, 2011} 
+\end{comment}
+
+
 
 
 %  $_{•}    $\\\centerline{\bf Talks:} \\ \\
@@ -449,8 +461,32 @@ Duke University %\hfill {\bf August 2, 2011}
 %  $_{•}    $\\
 % \centerline{\bf Posters:}
 
+% \href{https://ui.adsabs.harvard.edu/#abs/}{{\sl Correlations Between Hubble Residuals and MCMC Estimated Local}} \hfill {\bf January ?, 2018} \\
+% \textit{Stellar Ages of Type Ia Supernovae}\\
+% AAS 231th Meeting, Washington, DC
+
+
 % repeat of AAS 229th at GPSAC 2017 on September 13th at ND. http://gradphysics.nd.edu/conference/gpsac-2017/
 
+\hangindent=15pt {\footnotesize \textcolor{light-gray}{5}} \href{https://ui.adsabs.harvard.edu/#abs/2017AAS...22943402R/abstract}{{\sl Correlations Between Hubble Residuals and Local Stellar Populations of Type Ia Supernovae}, January 7, 2017}, AAS 229th Meeting, Grapevine, Texas
+\vspace{-12pt}
+
+\hangindent=15pt {\footnotesize \textcolor{light-gray}{4}} \href{https://ui.adsabs.harvard.edu/#abs/2016AAS...22723711R/abstract}{{\sl Correlating Type Ia Supernova Properties With Their Local Environment Using HST Snapshots of Host Galaxies}}, January 6, 2016, AAS 227th Meeting, Kissimmee, Florida
+\vspace{-12pt}
+
+\hangindent=15pt {\footnotesize \textcolor{light-gray}{3}} 
+{\sl Prospects for Detecting a Cosmic Bulk Flow},  January 6, 2015, AAS 225th Meeting, Seattle, Washington 
+\vspace{-12pt}
+
+\hangindent=15pt {\footnotesize \textcolor{light-gray}{2}} 
+{\sl Finding A Cosmic Bulk Flow}, February 27, 2014, GSU 6th Annual Research Symposium, Notre Dame, Indiana
+\vspace{-12pt}
+
+\hangindent=15pt {\footnotesize \textcolor{light-gray}{1}} 
+{\sl Determining the Location of a Radioactive Source in \textsc{Majorana Demonstrator}}, October 27, 2011, APS, Division of Nuclear Physics, Michigan State University 
+
+
+\begin{comment}
 \href{https://ui.adsabs.harvard.edu/#abs/2017AAS...22943402R/abstract}{{\sl Correlations Between Hubble Residuals and Local Stellar Populations}} \hfill {\bf January 7, 2017} \\
 \textit{of Type Ia Supernovae}\\
 AAS 229th Meeting, Grapevine, Texas
@@ -507,26 +543,31 @@ APS, Division of Nuclear Physics, Michigan State University
 % American Physical Society, Department of Nuclear Physics\\ 
 % Michigan State University \\
 % East Lansing, MI 
+\end{comment}
 
 
 
 
 %todo(should this link to newest on top, or most cited on top?)
-\section{\href{https://ui.adsabs.harvard.edu/#search/q=orcid\%3A\%220000-0002-1873-8973\%22&sort=date\%20desc\%2C\%20bibcode\%20desc}{Publications}}
+\section{\href{https://ui.adsabs.harvard.edu/\#search/q=orcid\%3A\%220000-0002-1873-8973\%22&sort=date\%20desc\%2C\%20bibcode\%20desc}{Refereed Publications \\ \href{https://scholar.google.com/citations?hl=en&user=7mgK134AAAAJ&view_op=list_works&gmla=AJsN-F6iePLN4Wjqx0zevRVxlzTXpDc-4tgHh3F1l7HgQKDk5_zZb36GX5SIz-2kA3vZQ80qinI8RGivZtpLqS9oI6iUuXFfSbvz_aHJrcP1iCaBmNpgHB0}{\normalfont \textit{\small{h-index = 2}}}} }
 
 % \begin{etaremune}%[align=left]
+\hangindent=15pt {\footnotesize \textcolor{light-gray}{4}} \href{https://ui.adsabs.harvard.edu/#abs/2016ApJ...827...60M/abstract}{Mathews, G.J., {\bf Rose, B. M.}, Garnavich, P., et al. 2016, {\sl Detectability of Cosmic Dark Flow in the Type Ia Supernova Redshift-Distance Relation}, ApJ, 827, 60}
 
-\hangindent=15pt [4] {\sl Detectability of Cosmic Dark Flow in the Type Ia Supernova Redshift-Distance Relation}\\
-\href{https://ui.adsabs.harvard.edu/#abs/2016ApJ...827...60M/abstract}{Mathews, G.J., {\bf Rose, B. M.}, Garnavich, P., et al. 2016 ApJ 827 60}
+\vspace{-12pt}
+\hangindent=15pt {\footnotesize \textcolor{light-gray}{3}} \href{https://ui.adsabs.harvard.edu/#abs/2016AJ....152...27K/abstract}{Kennedy, M.~R., Callanan, P., Garnavich, P.~M., {\bf et al.} 2016, {\sl The New Eclipsing CV MASTER OTJ192328.22+612413.5: A Possible SW Sextantis Star}, AJ, 152, 27}
 
-\hangindent=15pt [3] {\sl The New Eclipsing CV MASTER OTJ192328.22+612413.5: A Possible SW Sextantis Star}\\
-\href{https://ui.adsabs.harvard.edu/#abs/2016AJ....152...27K/abstract}{Kennedy, M.~R., Callanan, P., Garnavich, P.~M., {\bf et al.} 2016, AJ, 152, 27}
+\vspace{-12pt}
+\hangindent=15pt {\footnotesize \textcolor{light-gray}{2}} \href{https://ui.adsabs.harvard.edu/#abs/2015IJMPA..3045022M/abstract}{Mathews, G.~J., Gangopadhyay, M.~R., Garnavich, P., {\bf Rose, B. M.}, et al. 2015, {\sl Constraints on the Birth of the Universe and Origin of Cosmic Dark Flow}, International Journal of Modern Physics A, 30, 1545022}
 
-\hangindent=15pt [2] {\sl Constraints on the Birth of the Universe and Origin of Cosmic Dark Flow}\\
-\href{https://ui.adsabs.harvard.edu/#abs/2015IJMPA..3045022M/abstract}{Mathews, G.~J., Gangopadhyay, M.~R., Garnavich, P., {\bf Rose, B. M.}, et al. 2015 Int. J. Mod. Phys. A, 30, 1545022}
+\vspace{-12pt}
+\hangindent=15pt {\footnotesize \textcolor{light-gray}{1}} \href{https://ui.adsabs.harvard.edu/#abs/2015IBVS.6129....1L/abstract}{Littlefield, C., Garnavich, P., Magno, K., {\bf et al.} 2015, {\sl High-Amplitude, Rapid Photometric Variation of the New Polar MASTER OT J1321}, Information Bulletin on Variable Stars, 6129, 1}
 
-\hangindent=15pt [1] {\sl High-Amplitude, Rapid Photometric Variation of the New Polar MASTER OT J1321}\\
-\href{https://ui.adsabs.harvard.edu/#abs/2015IBVS.6129....1L/abstract}{Littlefield, C., Garnavich, P., Magno, K., {\bf et al.}\ 2015, Information Bulletin on Variable Stars, 6129, 1}
+
+
+
+% \section{Preprints}
+% \hangindent=15pt \href{https://ui.adsabs.harvard.edu/#abs/2014GCN..16492...1G/abstract}{Garnavich, P. \& {\bf Rose, B. M.} 2014, {\sl GRB140629A: VATT optical observations}, GRB Coordinates Network, Circular Service, No. 16492, #1}
 
 % \end{etaremune}
 % \newpage
