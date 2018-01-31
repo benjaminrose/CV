@@ -9,7 +9,7 @@ RM_TMP      = ${RM} $(foreach suff, ${TMP_SUFFS}, *.${suff})
 
 CHECK_RERUN = grep Rerun $*.log
 
-ALL_FILES = cv.pdf
+ALL_FILES = Rose_CV.pdf
 
 all: ${ALL_FILES}
 
