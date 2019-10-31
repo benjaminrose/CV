@@ -17,8 +17,10 @@ jobs:
           
       - name: Publish PDF
         run: |
-          git checkout --orphan master-pdf
-          git rm -rf .
-          git add -f Rose_CV.pdf
-          git -c user.name='github_actions' -c user.email='github_actions' commit -m "current pdf"
-          git push -q -f https://benjamin:${{ secrets.GITHUB_TOKEN }}@github.com/benjaminrose/CV master-pdf
+          if [ git branch | grep \* | cut -d ' ' -f2 | egrep 'master' ]; then
+            git checkout --orphan master-pdf
+            git rm -rf .
+            git add -f Rose_CV.pdf
+            git -c user.name='github_actions' -c user.email='github_actions' commit -m "current pdf"
+            git push -q -f https://benjamin:${{ secrets.GITHUB_TOKEN }}@github.com/benjaminrose/CV master-pdf
+          fi
