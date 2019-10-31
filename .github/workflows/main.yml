@@ -12,3 +12,4 @@ jobs:
         uses: xu-cheng/latex-action@master
         with:
           root_file: Rose_CV.tex
+          args: "-xelatex -file-line-error -interaction=nonstopmode"
