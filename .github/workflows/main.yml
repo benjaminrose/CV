@@ -1,6 +1,10 @@
 name: Build LaTeX document
 
-on: [push]
+on:
+  push:
+    branches: [ master ]
+  #https://docs.github.com/en/actions/reference/events-that-trigger-workflows#workflow_dispatch
+  workflow_dispatch:
 
 jobs:
   build_latex:
@@ -17,10 +21,10 @@ jobs:
           
       - name: Publish PDF
         run: |
-          if [ git branch | grep \* | cut -d ' ' -f2 | egrep 'master' ]; then
-            git checkout --orphan master-pdf
-            git rm -rf .
-            git add -f Rose_CV.pdf
-            git -c user.name='github_actions' -c user.email='github_actions' commit -m "current pdf"
-            git push -q -f https://benjamin:${{ secrets.GITHUB_TOKEN }}@github.com/benjaminrose/CV master-pdf
-          fi
+          # if [ git branch | grep \* | cut -d ' ' -f2 | egrep 'master' ]; then
+          git checkout --orphan master-pdf
+          git rm -rf .
+          git add -f Rose_CV.pdf
+          git -c user.name='github_actions' -c user.email='github_actions' commit -m "current pdf"
+          git push -q -f https://benjamin:${{ secrets.GITHUB_TOKEN }}@github.com/benjaminrose/CV master-pdf
+          # fi
