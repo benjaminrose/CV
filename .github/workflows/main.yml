@@ -1,4 +1,4 @@
-name: Generate PDF of CV
+name: Build PDF
 
 on:
   push:
@@ -20,6 +20,7 @@ jobs:
           styles: |
             https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
             https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
+          config: https://raw.githubusercontent.com/errata-ai/vale/master/.vale.ini
           files: "*.tex"
         env:
           # Required
