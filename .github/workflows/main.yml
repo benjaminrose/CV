@@ -21,7 +21,7 @@ jobs:
             https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
             https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
           config: https://raw.githubusercontent.com/errata-ai/vale/master/.vale.ini
-          files: "*.tex"
+          files: '["Rose_CV.tex"]'
         env:
           # Required
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
