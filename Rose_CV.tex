@@ -1,20 +1,16 @@
 % LaTeX resume using res.cls
-%changed line from sharelatex.com on the mac. Ipad does not work well.
 \documentclass[margin]{res}
-% \documentclass{res}
-%\usepackage{charter}
 \renewcommand*\sfdefault{uop}
-%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to  be sans serif
-% \usepackage[T1]{fontenc}  % this package does not work on TraviCI
-%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font 
 % \setlength{\textwidth}{5.2in}%{5.2in} % set width of text portion
-\usepackage[unicode]{hyperref}% add hypertext capabilities
-% \hypersetup{colorlinks=true}
-\urlstyle{same}
+
+
+%%%%%%%%
+%Imports
+%%%%%%%%
+
 \usepackage{verbatim} %lets me comment out blocks of text with \begin{comment} and \end{comment}
 \usepackage{cleveref}
-\usepackage{graphicx}
+\usepackage{amssymb,graphicx}
 \usepackage{etaremune}  %reverse counting lists, http://texblog.org/2011/11/29/reverse-enumerate-or-etaremune/
 \usepackage[ampersand]{easylist}
 % \usepackage{blindtext}
@@ -23,6 +19,24 @@
 \definecolor{light-gray}{gray}{0.55}
 \newcommand{\todo}[1]{\textbf{\textcolor{red}{[[#1]]}}\xspace}
 
+
+%%%%%%%%
+%Links
+%%%%%%%%
+
+% \usepackage[unicode]{hyperref}% add hypertext capabilities
+% \urlstyle{same}
+
+%https://tex.stackexchange.com/questions/53300/how-to-disable-links-completely-using-hyperref-package
+\usepackage{nohyperref}   % turns off links, 
+\usepackage{url}
+
+
+%%%%%%%%
+%Fonts
+%%%%%%%%
+
+% \usepackage{charter}
 \usepackage{fontspec}   %need to use LuaTEX or XeLaTeX
 % \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
 % \setmainfont{Charter}
@@ -33,6 +47,10 @@
 % \setboldfont{GaramondNo8-Bold}
 % \setmonofont{Lucida Sans Typewriter}
 
+
+%%%%%%%%
+%Footer
+%%%%%%%%
 
 %This lets me add headers/footers
 \usepackage{fancyhdr} % need to use xelatex or lualalex typesetting engine
@@ -56,7 +74,6 @@
 \rfoot{Benjamin M. Rose, page \thepage}
 %\rhead{\includegraphics[scale= 0.18]{BenRose_ND_Contact.png}}
 
-
 \thispagestyle{fancy}
 \thispagestyle{empty}
 %\rhead{\includegraphics[scale= 0.18]{BenRose_ND_Contact.png}}
@@ -72,12 +89,10 @@
 
 \begin{document}
 % Center the name over the entire width of resume:
-%\moveleft.5\hoffset\centerline{\hfill \includegraphics[scale =0.17]{BenRose_ND_Contact.png}}
 \moveleft.5\hoffset\centerline{\Huge\bf Benjamin M. Rose}
-%%%%%%% relink to a profesional website %%%%%%%%%%%%%%
 % \moveleft.5\hoffset\centerline{\large \bf Physics Ph.D. Candidate at Notre Dame}
 \vspace{2pt}
-\moveleft.5\hoffset\centerline{\bf \href{http://orcid.org/0000-0002-1873-8973}{ORCID: 0000-0002-1873-8973}}
+\moveleft.5\hoffset\centerline{ \href{http://orcid.org/0000-0002-1873-8973}{ORCID: 0000-0002-1873-8973}}
 % Draw a horizontal line the whole width of resume:
 \setlength{}{}
 \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
@@ -94,9 +109,6 @@
 
 
 
-
-
-
 \begin{resume}
 
 \section{Employment} 
@@ -107,16 +119,14 @@
 Supervisor: \href{https://phy.duke.edu/people/daniel-m-scolnic}{Assistant Professor Dan Scolnic}
 
 {\bf Postdoctoral Fellow} \hfill {\bf 2018--2020}\\
-% {\it Science Mission Office} \\
+{\it Roman Space Telescope Supernova Science} \\
 \href{http://www.stsci.edu}{Space Telescope Science Institute}, Baltimore, Maryland\\ 
 Supervisors: Drs. Susana Deustua and Andrew Fruchter
-
 
 % \href{http://physics.nd.edu}{\bf University of Notre Dame} {\bf \hfill August 2012 - Present}\\
 % {\sl Research Assistant} \hfill 2 semester \\
 % {\sl \href{labTA}{Teaching Assistant} \cref*{SI} } \hfill 3 semesters
 % %todo(make ref to different section in this text)
-
 
 % \href{http://www.whitworth.edu/physics/}{\bf Whitworth University} {\bf \hfill February 2011 - May 2012}\\
 % {\sl Supplemental Instruction Leader \cref{SI} for Physics } \hfill 2 semesters \\
@@ -137,13 +147,8 @@ Supervisors: Drs. Susana Deustua and Andrew Fruchter
 
 
 
+
 \section{Education}
-%\subsubsection{Current Program:} 
-% {\bf Current Program:} \\
-% {\sl Doctor of Philosophy  \hfill  Expected Graduation 2018} \\
-% Advisor: \href{www.nd.edu/~pgarnav}{Peter Garnavich}
-% The University of Notre Dame \\
-% South Bend, IN
 
 {\bf Doctor of Philosophy in Physics} \hfill {\bf 2018}\\
 % \textit{Type Ia Supernovae: Testing the Cosmological Principle and Improving \\Distance Measurements With Implications for the Hubble Constant}\\
@@ -153,16 +158,12 @@ Supervisors: Drs. Susana Deustua and Andrew Fruchter
 Advisor: \href{http://www.nd.edu/~pgarnavi}{Professor Peter Garnavich}
 
 
-% {\bf M.S. in Physics\hfill  May 2015 }\\
-% \href{http://physics.nd.edu}{University of Notre Dame}, Notre Dame, IN \\ 
-% Advisor: \href{www.nd.edu/~pgarnavi}{Peter Garnavich}
-
-% {\bf Completed Education:} \\
 {\bf Bachelor of Science in Physics,} \textit{cum laude} \hfill \textbf{2012}\\
 % cum laude\\%, GPA: 3.6/4.0 \\
-\href{http://www.whitworth.edu/physics/}{Whitworth University}, Spokane, Washington \\ 
+\href{http://www.whitworth.edu/physics/}{Whitworth University}, Spokane, Washington\\
 Minor: Mathematics
  
+
 
 % \section{\href{http://www.nd.edu/~brose3/current-research.html}{Research \\Interests}}
 % % \begin{tabular}{l l}
@@ -195,12 +196,11 @@ Minor: Mathematics
 
 
 
-
 \section{Collaborations}
 {\bf Nancy Grace Roman Space Telescope} (formerly WFIRST)
 \begin{itemize}\itemsep -2pt
-%  \item[] I hope: SIG \hfill {\bf 2020--present}
- \item[] Supernova Science Investigation Team \hfill {\bf 2018--present}
+ \item[] Foley Supernova Science Investigation Team \hfill {\bf 2020--present}
+ \item[] Perlmutter Supernova Science Investigation Team \hfill {\bf 2018--present}
 \end{itemize} \vspace{-12pt}
 {\bf \href{http://www.lsst-desc.org}{LSST Dark Energy Science Collaboration,}} Member \hfill {\bf 2018--present}\\
 {\bf Dark Energy Survey}, Member \hfill {\bf 2020--present}\\
@@ -211,12 +211,19 @@ Minor: Mathematics
 
 
 
+\section{Accepted Observational Programs} % and grants/proposals?
+
+% {\bf Co-I ADAP  {\bf 2021}
+%     \begin{itemize} \itemsep -2pt %reduce space between items
+%      \item[] \textit{idk}
+%      \end{itemize} \vspace{-12pt}
 
 
+% {\bf Co-I Spitzer DDT Program} \hfill {\bf 2019}
+%     \begin{itemize} \itemsep -2pt %reduce space between items
+%      \item[] \textit{IRAC photometry for the Cosmic Flux Standards - a network of faint \\absolute calibrators}
+%      \end{itemize} \vspace{-12pt}
 
-
-
-\section{Accepted Observational Programs}
 
 {\bf Principal Investigator, \href{http://www.sdss.org/dr13/manga/}{SDSS-IV MaNGA Ancillary Program}} \hfill \textbf{2017} \\
 \href{https://trac.sdss.org/wiki/MANGA/Survey/AncillaryPrograms2017/Rose_SNIa_Environments_and_HR}{\textit{Exploring a Possible Correlation Between Hubble Residuals and SN Ia Local Environments}}\\
@@ -232,21 +239,8 @@ Minor: Mathematics
 
 
 
+\section{Awards} 
 
-
-
-
-
-
-
-
-
-\section{Awards} % and grants/proposals?
-
-% {\bf Co-I Spitzer DDT Program} \hfill {\bf 2019}
-%     \begin{itemize} \itemsep -2pt %reduce space between items
-%      \item[] \textit{IRAC photometry for the Cosmic Flux Standards - a network of faint \\absolute calibrators}
-%      \end{itemize} \vspace{-12pt}
 {\bf Lennox Graduate Fellowship}, Notre Dame \hfill {\bf 2017}
     \begin{itemize}  \itemsep -2pt %reduce space between items
      \item[] Recognizes achievements and promise as a graduate student in physics
@@ -264,9 +258,6 @@ Minor: Mathematics
 % \begin{itemize}  \itemsep -2pt %reduce space between items
 %      \item[] \textit{\small{For a semester GPA of 3.75 or greater}}
 % \end{itemize} %\vspace{-12pt}
-
-
-
 
 
 
@@ -296,19 +287,17 @@ Minor: Mathematics
 % Open Source Software
 
 \begin{tabular}{l p{4.3in}}
-\hspace{-1em}{\bf Source Code:} & 
-corner.py, 
-kde\_corner, sncomso, \href{https://github.com/conda-forge/extinction-feedstock}{extinction}\\
+\hspace{-0.6em}{\bf Co-Maintainer:} & SNCosmo\\
+\hspace{-0.6em}{\bf Source Code:} & 
+corner.py, kde\_corner, SNANA, \href{https://github.com/conda-forge/extinction-feedstock}{extinction}, \href{https://github.com/rubind/host_unity}{UNITY}\\
 
-\hspace{-1em}{\bf Documentation:} & 
+\hspace{-0.6em}{\bf Documentation:} & 
 emcee,
 \href{https://github.com/scipy/scipy/pull/8011}{scipy},
-\href{https://github.com/mwaskom/seaborn/pulls?q=is\%3Apr+author\%3Abenjaminrose}{seaborn} (\href{https://github.com/mwaskom/seaborn/pull/1531}{twice}),
+\href{https://github.com/mwaskom/seaborn/pulls?q=is\%3Apr+author\%3Abenjaminrose}{seaborn},
 \href{https://github.com/kbarbary/sep/commit/612033788bcce44f110a87e1b54bb70eea9960c2}{sep}\\
 
-\hspace{-1em}{\bf Community Member:} & 
-\href{https://github.com/astropy/astropy/issues/4976}{astropy} %\\
-%{\bf Some Experience:} & C++, Parallel Computing, Mathematica, MATLAB, Javascript, Apple Script, ROOT, Swift\\
+% \hspace{-1em}{\bf Community Member:} & 
 \end{tabular}
 
 
@@ -317,8 +306,7 @@ emcee,
 
 
 
-
-\newpage
+% \newpage
 \section{\href{https://github.com/benjaminrose}{Technical \\Skills}}
 
 %{\bf Computer Languages \& Programs:}
@@ -326,6 +314,8 @@ emcee,
 \begin{tabular}{l p{4.5in}}
 
 \hspace{-1em}{\bf Daily Use:} & 
+\texttt{bash},
+\texttt{click},
 \href{https://www.python.org}{Python},
 \texttt{numpy},
 \texttt{scipy},
@@ -336,12 +326,12 @@ macOS,
 \href{http://www.astropy.org}{Astropy},
 \href{http://daringfireball.net/projects/markdown/}{Markdown},
 matplotlib,
-\href{http://pandas.pydata.org}{\texttt{pandas}}
+Overleaf,
+\href{http://pandas.pydata.org}{\texttt{pandas}},
+\texttt{zsh}
 \\
 
 \hspace{-1em}{\bf Proficient:} & 
-\texttt{bash},
-\texttt{click},
 \texttt{codcov},
 Confluence,
 \href{http://dan.iel.fm/emcee/current/}{\texttt{emcee}},
@@ -350,10 +340,11 @@ GitHub Actions,
 \href{http://jupyter.org}{Jupyter Notebook},
 \href{https://jupyterlab.readthedocs.io/en/stable/}{JupyterLab},
 \texttt{pytest},
+\texttt{pymc3},
+reStructuredText,
 \href{http://mc-stan.org}{\texttt{stan}},
 \texttt{scikit-learn},
-TravisCI,
-\texttt{zsh}
+TravisCI\vspace{0.3em}
 \\
 
 \hspace{-1em}{\bf Competent:} & HTML,
@@ -368,40 +359,14 @@ Windows %\\
 
 
 
-
-
-
-
-
-
-
-
-
-\section{Professional Societies}
-
-{\bf American Astronomical Society (AAS)}  \hfill {\bf 2014--present}\\
-% \begin{itemize}\itemsep -2pt
-%     \item[] Full Member \hfill {\bf 2019--present}
-%     \item[] Junior Member \hfill {\bf 2014--2018}
-% \end{itemize} \vspace{-10pt}
-% \textbf{\href{http://network.asa3.org}{American Scientific Affiliation (ASA)}}, Student Member \hfill \textbf{2014 - present}\\
-% {\bf American Physical Society (APS)}, Student Member  \hfill {\bf 2011--2014}
-
-
-
-
-
-
-
-
-
-\section{Activities \& Outreach} %Service and outreach?? - Referee is often service.
+\section{Activities \& Service} %Service and outreach?? - Referee is often service.
 
 % \hspace{-1.5em}\begin{tabular*}{\resumewidth}{p{4.17in} r}
 % \begin{description}[align=left] % use \itme[-]
 % \ListProperties(Style2*=,Numbers=a,Numbers1=R,FinalMark={)})
 
-\textbf{\href{https://www.stsci.edu/contents/events/stsci/2020/march/accurate-flux-calibration-for-21st-century-astrophysics?timeframe=}{Accurate Flux Calibration}}, organizing committee, \textit{postponed} \hfill \textbf{Spring 2020}\\
+\textbf{Roman RCS Under-performance Mitigation Task Force}, member \hfill \textbf{September 2020}\\
+\textbf{\href{https://www.stsci.edu/contents/events/stsci/2020/march/accurate-flux-calibration-for-21st-century-astrophysics?timeframe=}{Accurate Flux Calibration}}, organizing committee, \textit{canceled} \hfill \textbf{March 2020}\\
 \textbf{WFIRST Science Jamboree}, organizing committee \hfill \textbf{July 2019}\\
 \textbf{WFIRST Simulated Data Hack Day}, organizing committee \hfill \textbf{March 2019}\\
 \textbf{\href{gradphysics.nd.edu}{Graduate Physics Society (GPS)}}
@@ -459,27 +424,34 @@ Windows %\\
 
 
 
-
-
-
-
-
-
-
-
 \section{Reviewer}
 
-\href{https://github.com/openjournals/joss-reviews/issues?utf8=✓&q=is\%3Aissue+benjaminrose+label\%3Areview}{Journal of Open Source Software}; The Astrophysical Journal Letters; National Research, Development and Innovation Office, Hungary
+\href{https://github.com/openjournals/joss-reviews/issues?utf8=✓&q=is\%3Aissue+benjaminrose+label\%3Areview}{Journal of Open Source Software} ~\diamond~ The Astrophysical Journal, Letters \\ 
+Monthly Notices of the Royal Astronomical Society, Letters ~\diamond~ NASA ROSES \\
+National Research, Development and Innovation Office, Hungary
 
 
 
 
+\section{Professional Societies}
+
+{\bf American Astronomical Society (AAS)}  \hfill {\bf 2014--present}\\
+% \begin{itemize}\itemsep -2pt
+%     \item[] Full Member \hfill {\bf 2019--present}
+%     \item[] Junior Member \hfill {\bf 2014--2018}
+% \end{itemize} \vspace{-10pt}
+% \textbf{\href{http://network.asa3.org}{American Scientific Affiliation (ASA)}}, Student Member \hfill \textbf{2014 - present}\\
+% {\bf American Physical Society (APS)}, Student Member  \hfill {\bf 2011--2014}
 
 
 
 
 
 % \section{Mentorship} % combine with teaching?
+
+
+
+
 
 \section{\href{https://www3.nd.edu/~brose3/\#classes}{Teaching Experience}}\label{teaching}
 % \textbf{Mentoring}
@@ -521,6 +493,7 @@ Windows %\\
     \item[] Led peer-to-peer study sessions focused on active learning techniques
     \end{itemize}
 
+
 % {\bf Personal Tutor:}
 % Worked individually with a student on material and study skills for High School Geometry and Algebra.
 \begin{comment}
@@ -537,52 +510,28 @@ year |   Fall        | Spring        | Summer
 
 
 
+% \section{Publications in Preparation}
 
-
-
-
-
-
-
-
-\section{Publications in Preparation}
-
-
-
-\hangindent=15pt 
-% \vspace{-12pt}
-\hangindent=15pt 
-{\bf Rose, B. M.}, Rubin, D., Strolger, L., Garnavich P. M. 2020, {\sl Combining Host Galaxy Mass and Local Stellar Age Improves Type Ia Supernovae Distances}
-
-% \vspace{-12pt}
 % \hangindent=15pt 
-% {\bf Rose, B. M.}, Rubin, D., Dixon, S., et al. 2020, {\sl Testing Linear Standardization of Type Ia Supernovae using Gaussian Processes}
-
-% \vspace{-12pt}
-% \hangindent=15pt 
-% {\bf Rose, B. M.} 2020, {\sl Host Galaxy Corrections are a Red Herring:  Type Ia Supernovae Need Nonlinear Models}
-
-% \vspace{-12pt}
-% \hangindent=15pt {\textcolor{light-gray}{\textbullet}}
-% {\bf Rose, B. M.} 2020, {\sl Supernovae Survey Cadence and the Ability to Constrain Type Ia Systematic Errors}.
+% {\bf Rose, B. M.}, Rubin, D., Dixon, S., et al., {\sl Testing Linear Standardization of Type Ia Supernovae using Gaussian Processes}
 
 
 
 
-
-
+%url to copy and paste - https://ui.adsabs.harvard.edu/search/filter_property_fq_property=AND&filter_property_fq_property=property%3A%22refereed%22&fq=%7B!type%3Daqp%20v%3D%24fq_property%7D&fq_property=(property%3A%22refereed%22)&p_=0&q=orcid%3A0000-0002-1873-8973&sort=citation_count%20desc%2C%20bibcode%20desc
 %All ORCID Papers -- https://ui.adsabs.harvard.edu/\#search/q=orcid\%3A\%220000-0002-1873-8973\%22&sort=date\%20desc\%2C\%20bibcode\%20desc
 %Only Refereed papers -- https://ui.adsabs.harvard.edu/search/filter_property_fq_property=AND&filter_property_fq_property=property\%3A\%22refereed\%22&fq=\%7B!type\%3Daqp\%20v\%3D\%24fq_property\%7D&fq_property=(property\%3A\%22refereed\%22)&q=orcid\%3A0000-0002-1873-8973&sort=date\%20desc\%2C\%20bibcode\%20desc&p_=0
 %Google Scholar -- https://scholar.google.com/citations?hl=en&user=7mgK134AAAAJ&view_op=list_works&gmla=AJsN-F6iePLN4Wjqx0zevRVxlzTXpDc-4tgHh3F1l7HgQKDk5_zZb36GX5SIz-2kA3vZQ80qinI8RGivZtpLqS9oI6iUuXFfSbvz_aHJrcP1iCaBmNpgHB0
 %todo(should this link to newest on top, or most cited on top?)
 \section{
-% \href{https://ui.adsabs.harvard.edu/search/filter_property_fq_property=AND&filter_property_fq_property=property\%3A\%22refereed\%22&fq=\%7B!type\%3Daqp\%20v\%3D\%24fq_property\%7D&fq_property=(property\%3A\%22refereed\%22)&q=orcid\%3A0000-0002-1873-8973&sort=date\%20desc\%2C\%20bibcode\%20desc&p_=0}
 \href{https://ui.adsabs.harvard.edu/search/filter_property_fq_property=AND&filter_property_fq_property=property\%3A\%22refereed\%22&fq=\%7B!type\%3Daqp\%20v\%3D\%24fq_property\%7D&fq_property=(property\%3A\%22refereed\%22)&p_=0&q=orcid\%3A0000-0002-1873-8973&sort=citation_count\%20desc\%2C\%20bibcode\%20desc}
 {Refereed Publications\\  
-\normalfont \textit{\small{h-index = 5\\
-202 total citations
+\normalfont \textit{\small{\hspace{-0.3em}
+% 4 first-author papers \\
+% h-index = 5\\
+525 total citations
 % \\\dagger~ $>25$ citations
-% \\\star~ $>10$ citation
+% \\\star~ $>10$ citations
 }}}
 }
 % \newcommand{\twofive}{\hspace{-0.75em}\dagger~}
@@ -590,18 +539,28 @@ year |   Fall        | Spring        | Summer
 
 % \begin{etaremune}%[align=left]
 
+\hangindent=15pt 
+\href{https://arxiv.org/abs/2105.11954}{Wiseman, P, M. Sullivan, M. Smith {\bf et al.} 2021, {\sl Rates and Delay Times of Type Ia Supernovae in the Dark Energy Survey}, submitted to MNRAS on May 25, 2021. arXiv:2105.11954} 
+\vspace{-12pt}
 
-% \hangindent=15pt {\footnotesize \textcolor{light-gray}{9}} \href{https://ui.adsabs.harvard.edu/}{{\bf Rose, B. M.}, Rubin, D., Strolger, L., Garnavich P. M.  2019, {\sl Type Ia Supernovae Systematic Uncertainties}, in prep.}
+% \hangindent=15pt 
+% \href{}{{\bf Rose, B. M.} 2021, {\sl Host-Galaxy Corrections Are a Red Herring: Type Ia Supernovae Are Nonlinear}, submitted to PASP on March 12, 2021} %http://arxiv.org/abs/2012.01460
 % \vspace{-12pt}
 
 \hangindent=15pt 
+\href{https://ui.adsabs.harvard.edu/abs/2020arXiv201201460R/abstract}{{\bf Rose, B. M.}, Rubin, D., Strolger, L., Garnavich P. M. 2021, {\sl Combined, Host Galaxy Mass and Local Stellar Age Improves Type Ia Supernovae Distances}, ApJ, 909, 28} %http://arxiv.org/abs/2012.01460
+\vspace{-12pt}
+
+\hangindent=15pt 
 % {\footnotesize \textcolor{light-gray}{8}} 
-\href{https://ui.adsabs.harvard.edu/abs/2020ApJ...896L...4R/abstract}{{\bf Rose, B. M.}, Rubin, D., Cikota, A. 2020, {\sl Evidence for Cosmic Acceleration is Robust to Observed Correlations Between Type Ia Supernova Luminosity and Stellar Age}, ApJL, 896, L4}
+% \star 
+\href{https://ui.adsabs.harvard.edu/abs/2020ApJ...896L...4R/abstract}{{\bf Rose, B. M.}, Rubin, D., Cikota, A., et al. 2020, {\sl Evidence for Cosmic Acceleration is Robust to Observed Correlations Between Type Ia Supernova Luminosity and Stellar Age}, ApJL, 896, L4}
 % in press accepted May 15, 2020, %\href{http://arxiv.org/abs/2002.12382}{arXiv:2002.12382}
 \vspace{-12pt}
 
 \hangindent=15pt 
 % {\footnotesize \textcolor{light-gray}{8}} 
+% \dagger 
 \href{https://ui.adsabs.harvard.edu/abs/2020ApJS..249....3A/abstract}{The SDSS Collaboration 2020, {\sl The Sixteenth Data Release Of The Sloan Digital Sky Surveys}, ApJSS, 249, 3}
 %, in press, accepted May 11th, 2020, \href{http://arxiv.org/abs/1912.02905}{arXiv:1912.02905}
 \vspace{-12pt}
@@ -615,17 +574,20 @@ year |   Fall        | Spring        | Summer
 
 \hangindent=15pt 
 % {\footnotesize 6} 
+% \dagger 
 \href{https://ui.adsabs.harvard.edu/#abs/2019arXiv190201433R/abstract}{{\bf Rose, B. M.}, Garnavich, P. M., Berg, M. A. 2019, {\sl Think Global, Act Local: The Effect of Environment on Hubble Residuals of Type Ia Supernovae}, ApJ, 874, 32}
 \vspace{-12pt}
 
 \hangindent=15pt 
 % {\footnotesize 5}
 % \hspace{-1.1em}\dagger~
+% \dagger 
 \href{https://ui.adsabs.harvard.edu/#abs/2018arXiv181202759A/abstract}{The SDSS Collaboration 2019, {\sl The Fifteenth Data Release Of The Sloan Digital Sky Surveys}, ApJSS, 240, 23}
 \vspace{-12pt}
 
 \hangindent=15pt 
 % {\footnotesize 4}
+% \star 
 \href{https://ui.adsabs.harvard.edu/#abs/2016ApJ...827...60M/abstract}{Mathews, G. J., {\bf Rose, B. M.}, Garnavich, P. M., et al. 2016, {\sl Detectability of Cosmic Dark Flow in the Type Ia Supernova Redshift-Distance Relation}, ApJ, 827, 60}
 
 \vspace{-12pt}
@@ -647,14 +609,29 @@ year |   Fall        | Spring        | Summer
 
 \section{\href{https://ui.adsabs.harvard.edu/\#search/q=orcid\%3A\%220000-0002-1873-8973\%22&sort=date\%20desc\%2C\%20bibcode\%20desc}{Non-refereed Works}}
 
+%Shared never posted
 \hangindent=15pt 
-Deustua, S., \textbf{et al.} 2020, {\sl The need for the Relative Calibration System on WFIRST}, arXiv pending.
+\textbf{Rose, B. M.},  R. Hounsell,  S. Deustua,  et al. 2021, {\sl Prioritization of RCS LED Lenses: Impacts on the Supernova Key Project}, Memo for Roman Calibration Working Group, March 11, 2021.
+\vspace{-12pt}
+
+\hangindent=15pt 
+\textbf{Rose, B. M.}, et al. 2021, {\sl Synergies between Vera C. Rubin Observatory, Nancy Grace Roman Space Telescope, and Euclid Mission: Constraining Dark Energy with Type Ia Supernovae}, Response to DOE/NASA request for information on January 21, 2021. \href{https://arxiv.org/abs/2104.01199}{arXiv:2104.01199}
+\vspace{-12pt}
+
+\hangindent=15pt 
+\href{iopscience.iop.org/article/10.3847/2515-5172/abf1fb}{Deustua, S., \textbf{et al.} 2021, {\sl The Roman Space Telescope Relative Calibration System and the Dark Energy Figure of Merit}, Res. Notes AAS 5 66.}
+\vspace{-12pt}
+
+%Shared never posted
+\hangindent=15pt 
+\textbf{Rose, B. M.}, Rubin, D., Deustua, S., et al. 2020, {\sl The Limit of Pre-flight Unusable Pixels on the Roman Space Telescope Supernova Survey Science}, Roman Detector Working Group, August 28, 2020.
 \vspace{-12pt}
 
 \hangindent=15pt 
 Ryan, R. E., Crawford, S., \textbf{et al.} 2020, {\sl Anticipated Data Processing and Algorithm Descriptions for SIT-Contributed Software.} \href{https://outerspace.stsci.edu/display/FWG/Anticipated+Data+Processing+and+Algorithm+Descriptions+for+SIT-Contributed+Software}{A WFIRST operations concept document.}
 \vspace{-12pt}
 
+%Written never shared
 % \hangindent=15pt \href{}{{\bf Rose, B. M.} 2019, {\sl Supernovae Survey Cadence and the Ability to Constrain Type Ia Systematic Uncertainties}, WFRIST Note, arXiv:0000.000000, \textit{in prep.}}
 % \vspace{-12pt}
 
@@ -697,8 +674,18 @@ Dore, O., et al. \textit{WFIRST: The Essential Cosmology Space Observatory for t
 \section{Invited \\Presentations}
 
 \hangindent=15pt 
+% {\footnotesize 6}
+\textit{Synergies of the Roman Space Telescope with Other Missions and Facilities}, February 8, 2022, co-led a panel discussion at Exploring the Transient Universe with the Nancy Grace Roman Space Telescope, Pasadena, California
+\vspace{-12pt}
+
+\hangindent=15pt 
 % {\footnotesize 6} 
-{\it Roman Space Telescope and Type Ia Supernova Systematic Uncertainties}, September 22, 2020, Notre Dame Astrophysics Seminar, South Bend, Indiana
+{\it Updates from Roman Supernova Science Investigation Team}, May 19, 2021, LSST DESC Seminar, virtual
+\vspace{-12pt}
+
+\hangindent=15pt 
+% {\footnotesize 6} 
+{\it Systematics Limited Cosmology with the Nancy Grace Roman Space Telescope}, September 22, 2020, Notre Dame Astrophysics Seminar, virtual
 \vspace{-12pt}
 
 \hangindent=15pt 
@@ -711,7 +698,19 @@ Dore, O., et al. \textit{WFIRST: The Essential Cosmology Space Observatory for t
 {\it Understaning Type Ia Supernova Systematic Uncertainties}, April 9, 2020 (\textit{Canceled}), Duke Astrophysics Seminar, Durham, North Carolina
 
 
+
+
 \section{Oral \\Presentations}
+
+% \hangindent=15pt 
+% % {\footnotesize 8} 
+% {\sl Improving SN Ia Standardization with Host Galaxy Mass and Local Stellar Age}, January 16, 2021, DESC Supernova Working Group meeting
+% \vspace{-12pt}
+
+\hangindent=15pt 
+% {\footnotesize 8} 
+{\sl Improving SN Ia Standardization with Host Galaxy Mass and Local Stellar Age}, January 11, 2021, 237th AAS Meeting, virtual
+\vspace{-12pt}
 
 \hangindent=15pt 
 % {\footnotesize 7} 
@@ -820,17 +819,12 @@ Duke University %\hfill {\bf August 2, 2011}
 
 
 
-
-
-
-
-
 \section{Poster Presentations}
 %  $_{•}    $\\
 % \centerline{\bf Posters:}
 \hangindent=15pt 
 % {\footnotesize 9} 
-{\sl Testing Linear Standardization of Type Ia Supernovae using Gaussian Processes}, June 2020, 236th AAS Virtual Meeting
+\href{https://aas236-aas.ipostersessions.com/default.aspx?s=02-A5-6C-28-27-98-74-49-ED-38-21-BF-C2-85-DA-39}{\sl Testing Linear Standardization of Type Ia Supernovae using Gaussian Processes}, June 2020, 236th AAS Meeting, virtual
 \vspace{-12pt}
 
 \hangindent=15pt 
