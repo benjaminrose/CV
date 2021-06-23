@@ -1,4 +1,4 @@
-name: Build LaTeX document
+name: Generate PDF of CV
 
 on:
   push:
@@ -7,7 +7,26 @@ on:
   workflow_dispatch:
 
 jobs:
+  check-spelling:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v1
+        
+      - name: Vale
+        uses: errata-ai/vale-action@v1.4.0
+        with:
+          # Optional
+          styles: |
+            https://github.com/errata-ai/Microsoft/releases/latest/download/Microsoft.zip
+            https://github.com/errata-ai/write-good/releases/latest/download/write-good.zip
+          files: "*.tex"
+        env:
+          # Required
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          
   build_latex:
+    needs: check-spelling
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
