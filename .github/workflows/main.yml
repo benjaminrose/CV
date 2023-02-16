@@ -27,7 +27,7 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           
   build_latex:
-    needs: check-spelling
+#     needs: check-spelling
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
